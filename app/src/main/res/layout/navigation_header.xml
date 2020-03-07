@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+  <!-- android:background="#fa2009"-->
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/driverProfile"
+      android:layout_width="120sp"
+      android:layout_height="120sp"
+      android:layout_centerHorizontal="true"
+      android:layout_margin="15dp"
+      android:src="@drawable/ethio_rental_logo" />
+
+  <TextView
+      android:id="@+id/welcome_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/driverProfile"
+      android:fontFamily="sans-serif-condensed"
+      android:text="@string/house_rental_txt"
+      android:textAlignment="center"
+      android:textColor="@android:color/white"
+      android:textSize="20sp"
+      android:textStyle="italic" />
+</RelativeLayout>

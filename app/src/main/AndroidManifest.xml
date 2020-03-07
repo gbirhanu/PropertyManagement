@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dsd.machinerental">
+    <!--
+          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+          Google Maps Android API v2, but you must specify either coarse or fine
+          location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:name="com.dsd.machinerental.MainApplication"
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@drawable/ethio_rental_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/ethio_rental_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
+        <activity android:name="com.dsd.machinerental.ActivateMachinery"></activity>
+        <activity android:name="com.dsd.machinerental.UpdateMachinery" />
+        <activity android:name="com.dsd.machinerental.ListMyMachinery" />
+        <activity android:name="com.dsd.machinerental.MachineDetails" />
+        <activity android:name="com.dsd.machinerental.InsertMoreMachineryPicture" />
+        <activity android:name="com.dsd.machinerental.ViewAllMachinery" />
+        <activity android:name="com.dsd.machinerental.SearchMachinery" />
+        <activity android:name="com.dsd.machinerental.RegisterMachinery" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name="com.dsd.machinerental.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+
+                <!-- Intent filter action for receiving multiple images -->
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- To receive Images set mime type to image -->
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dsd.machinerental.LoginActivity" />
+        <activity
+            android:name="com.dsd.machinerental.SearchByPrice"
+            android:label="@string/serch_home" />
+        <activity
+            android:name="com.dsd.machinerental.ViewAllHouse"
+            android:label="@string/house_list_txt" />
+        <activity
+            android:name="com.dsd.machinerental.MainActivity"
+            android:label="@string/reg_home_txt" />
+        <activity android:name="com.dsd.machinerental.MachineMapsActivity" />
+        <activity
+            android:name="com.dsd.machinerental.MapsActivity"
+            android:label="@string/app_label" />
+        <activity android:name="com.dsd.machinerental.InsetMorepicture" />
+        <activity android:name="com.dsd.machinerental.UserRegisration" />
+        <activity android:name="com.dsd.machinerental.ImageShower" />
+        <activity
+            android:name="com.dsd.machinerental.HouseDetails"
+            android:label="@string/house_profile_txt" />
+        <activity android:name="com.dsd.machinerental.ChangeLanguage" />
+        <activity android:name="com.dsd.machinerental.ServiceActivation" />
+        <activity android:name="com.dsd.machinerental.ProfileActivity" />
+        <activity android:name="com.dsd.machinerental.dashboardActivity" />
+        <activity
+            android:name="com.dsd.machinerental.CustomGallery_Activity"
+            android:label="@string/gallery_header_txt" />
+        <activity android:name="com.dsd.machinerental.UpdateHomeInfo" />
+        <activity android:name="com.dsd.machinerental.MyHouseList" />
+        <activity android:name="com.dsd.machinerental.UpdateHome" />
+    </application>
+
+</manifest>

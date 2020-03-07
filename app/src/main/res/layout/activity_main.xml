@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/navigation_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/propertyType"
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/house"
+                        android:drawablePadding="5dp"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:text="@string/property_type_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+                    <Spinner
+                        android:id="@+id/propertyTypeList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/bedroom_new"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/bed_room_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/noRoomsList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/cons_type_icon"
+                        android:drawablePadding="5dp"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:text="@string/cons_type_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+                    <Spinner
+                        android:id="@+id/houseConstructionTypeList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/serviceTypes"
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/service_type"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/serv_type_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/serviceTypeList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/bathroomtub"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/half_bathroom_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/halfBathroomsList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/fullbathroom"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/full_bathroom_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/fullBathroomList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/baseline_security_black_18dp"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/server_quarter_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/servantQuarterList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/baseline_security_black_18dp"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/serv_quar_bath_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/servantQuarterBathroomList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_kitchen_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/modern_kitchen_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/modernKitchenList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_local_parking_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/parking_sp_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+                    <Spinner
+                        android:id="@+id/parkingSpaceList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/water_tank"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/water_tank_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/waterTankList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/generator"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/generater_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Spinner
+                        android:id="@+id/generatorAvailableList"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spin_shape"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/enterYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawableLeft="@drawable/ic_date_built"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:hint="@string/built_year_txt"
+                            android:inputType="textPersonName"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:maxLines="1"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/buildSquareMeter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawableLeft="@drawable/building_square_m"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:hint="@string/builting_square_meter"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/compoundSquareM"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawableLeft="@drawable/compound_square_m"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:hint="@string/compound_square_meter"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_margin="8dp"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawableLeft="@drawable/baseline_payment_black_18dp"
+                            android:drawablePadding="5dp"
+                            android:ems="10"
+                            android:hint="@string/house_price_txt"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/houseDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="top"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:layout_marginLeft="20dp"
+                            android:ems="10"
+                            android:hint="@string/additional_txt"
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/housePhoto"
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_file_upload_black_24dp"
+                        android:drawablePadding="5dp"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text="@string/picture_txt"
+                        android:textColor="#000"
+                        android:textColorHint="#fff" />
+
+                    <Button
+                        android:id="@+id/browsePhoto"
+                        style="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@android:color/darker_gray"
+                        android:clickable="true"
+                        android:text="@string/browse_txt"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addPhotoContainer"
+                    android:visibility="gone"
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/addphotos"
+                        style="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:layout_width="0dp"
+                        android:layout_weight="60"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/gradient"
+                        android:clickable="true"
+                        android:textSize="18dp"
+                        android:text="@string/more_pick"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white" />
+                    <Button
+                        android:id="@+id/closeD"
+                        style="@style/Base.TextAppearance.AppCompat.Body1"
+                        android:layout_width="0dp"
+                        android:layout_weight="40"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/gradient"
+                        android:text="Close"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f9d7db" />
+                <Button
+                    android:id="@+id/registerBtn"
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/gradient"
+                    android:clickable="true"
+                    android:text="@string/reg_txt"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/navigation_header"
+        android:layout_gravity="start">
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchMachinery">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/navigation_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".SearchByPrice">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/filter_container"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:id="@+id/titles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="@string/machine_with_what"/>
+                    <View
+                        android:id="@+id/view0"
+                        android:layout_below="@+id/titles"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f9d7db" />
+                    <RadioGroup
+                        android:layout_below="@+id/view0"
+                        android:id="@+id/category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/frent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/yes_txt" />
+
+                        <RadioButton
+                            android:id="@+id/fsale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_txt" />
+                    </RadioGroup>
+                    <View
+                        android:id="@+id/view19"
+                        android:layout_below="@id/category"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f9d7db" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/sboContainer"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view19">
+
+                        <EditText
+                            android:id="@+id/searchBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="12dp"
+                            android:hint="@string/min_price_txt"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mval"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category"
+                        android:layout_toRightOf="@+id/sboContainer">
+
+                        <EditText
+                            android:id="@+id/max_val"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="12dp"
+                            android:hint="@string/max_price_txt"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="8dp"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_below="@+id/mval"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f9d7db" />
+                    <LinearLayout
+                        android:id="@+id/constTypeContainer"
+                        android:layout_below="@+id/view1"
+                        android:weightSum="100"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="60"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="5dp"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:text="@string/machinery_type_txt"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+                        <Spinner
+                            android:id="@+id/propertyTypeList"
+                            android:layout_width="0dp"
+                            android:layout_weight="40"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_below="@+id/constTypeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f9d7db" />
+                    <LinearLayout
+                        android:id="@+id/servType_container"
+                        android:layout_below="@+id/view2"
+                        android:weightSum="100"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/serviceTypes"
+                            android:layout_width="0dp"
+                            android:layout_weight="60"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="5dp"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:text="@string/machine_model"
+                            android:textColor="#000"
+                            android:textColorHint="#fff" />
+
+                        <Spinner
+                            android:id="@+id/machineModels"
+                            android:layout_width="0dp"
+                            android:layout_weight="40"
+                            android:layout_height="wrap_content"
+                            />
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_below="@+id/servType_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f9d7db" />
+                    <LinearLayout
+                        android:id="@+id/justlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view3"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_weight="30"
+                            android:text="@string/built_year_txt"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/decrementBedroomNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="25"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_remove_circle_outline_black_24dp" />
+
+                        <EditText
+                            android:inputType="number"
+                            android:id="@+id/nofbedroom"
+                            android:layout_width="0dp"
+                            android:layout_weight="20"
+                            android:layout_height="wrap_content"
+                            android:text="1990" />
+
+                        <Button
+                            android:id="@+id/incrementBedroomNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="25"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/searchBtn"
+                            android:drawableLeft="@drawable/ic_add_circle_black_24dp" />
+                    </LinearLayout>
+                    <View
+                        android:layout_below="@id/justlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f9d7db" />
+
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/searchBtn"
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_filter_list_black_24dp"
+                    android:text="@string/filter_txt"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lightgray">
+
+                    <ProgressBar
+                        android:id="@+id/viewAllProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:forceHasOverlappingRendering="true"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylcerViewPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout_editor_absoluteX="745dp"
+                        tools:layout_editor_absoluteY="-51dp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/nav_menu"></com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

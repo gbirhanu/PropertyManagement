@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <include
+        layout="@layout/navigation_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="bottom"
+          sothree:umanoDragView="@+id/infoPanel"
+          sothree:umanoPanelHeight="68dp"
+          sothree:umanoShadowHeight="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <fragment
+              android:id="@+id/map"
+              class="com.google.android.gms.maps.SupportMapFragment"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_view_quilt_black_24dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+          <RelativeLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/gradient"
+                android:drawableBottom="@drawable/ic_view_quilt_black_24dp"
+                android:text="@string/house_info_txt"
+                android:textColor="@android:color/white" />
+          </RelativeLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:padding="5sp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5sp">
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_view_quilt_black_24dp"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#ab9e0e"
+                    android:textColorHint="#ab9e0e" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#f9d7db" />
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_view_quilt_black_24dp"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#ab9e0e"
+                    android:textColorHint="#ab9e0e" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#f9d7db" />
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_view_quilt_black_24dp"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#ab9e0e"
+                    android:textColorHint="#ab9e0e" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#f9d7db" />
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_view_quilt_black_24dp"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#ab9e0e"
+                    android:textColorHint="#ab9e0e" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#f9d7db" />
+
+              <com.google.android.material.textfield.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_view_quilt_black_24dp"
+                    android:drawablePadding="12dp"
+                    android:ems="10"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="#ab9e0e"
+                    android:textColorHint="#ab9e0e"
+                    android:visibility="gone" />
+
+              </com.google.android.material.textfield.TextInputLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#f9d7db" />
+
+              <TableLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:stretchColumns="0,1">
+
+                <TableRow>
+
+                  <ImageButton
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:background="@android:color/transparent"
+                      android:src="@mipmap/ic_launcher"
+                      android:visibility="gone" />
+
+                  <ImageButton
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:background="@android:color/transparent"
+                      android:src="@mipmap/ic_launcher"
+                      android:visibility="gone" />
+                </TableRow>
+              </TableLayout>
+            </LinearLayout>
+          </LinearLayout>
+
+          <TableLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:stretchColumns="0,1">
+
+            <TableRow>
+
+              <Button
+                  style="@style/Base.TextAppearance.AppCompat.Body1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/gradient"
+                  android:clickable="true"
+                  android:text="Register"
+                  android:textAllCaps="false"
+                  android:textColor="@android:color/white" />
+
+              <Button
+                  style="@style/Base.TextAppearance.AppCompat.Body1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/gradient"
+                  android:clickable="true"
+                  android:text="Search"
+                  android:textAllCaps="false"
+                  android:textColor="@android:color/white" />
+            </TableRow>
+          </TableLayout>
+
+        </LinearLayout>
+      </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+      <!-- Implementation of find my location button
+      <android.support.design.widget.FloatingActionButton
+          android:id="@+id/myLocationButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom|right"
+          android:layout_marginBottom="20dp"
+          android:layout_marginRight="20dp"
+          android:src="@android:drawable/ic_menu_mylocation"
+          app:borderWidth="0dp"
+          app:elevation="6dp"
+          app:pressedTranslationZ="12dp"
+          app:fabSize="normal" />-->
+
+      <com.google.android.material.bottomnavigation.BottomNavigationView
+          android:id="@+id/navigation"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="0dp"
+          android:layout_gravity="bottom"
+          android:layout_marginStart="0dp"
+          android:background="?android:attr/windowBackground"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          app:menu="@menu/navigation" />
+    </FrameLayout>
+  </LinearLayout>
+
+  <com.google.android.material.navigation.NavigationView
+      android:id="@+id/navi_header"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:background="@android:color/white"
+      app:headerLayout="@layout/navigation_header"
+      app:menu="@menu/nav_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

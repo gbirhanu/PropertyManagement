@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+        android:icon="@drawable/ic_home_black_24dp"
+        android:id="@+id/nav_registration"
+        android:title="@string/reg_home_txt" />
+    <item
+        android:id="@+id/nav_search_home"
+        android:icon="@drawable/places_ic_search"
+        android:title="@string/serch_home"
+        android:checkable="true"
+        />
+    <item
+        android:id="@+id/nav_view_all"
+        android:icon="@drawable/ic_view_quilt_black_24dp"
+        android:title="@string/view_all_txt"
+        android:checkable="true"
+        />
+    <item
+        android:id="@+id/activate_home"
+        android:icon="@drawable/ic_visibility_off_black_24dp"
+        android:title="@string/activate_house_again"
+        android:checkable="true"
+        />
+    <item
+        android:id="@+id/view_your_home"
+        android:icon="@drawable/ic_update_black_24dp"
+        android:title="@string/update_home"
+        android:checkable="true"
+        />
+    <item
+        android:id="@+id/verify_user"
+        android:icon="@drawable/ic_verified_user_black_24dp"
+        android:title="@string/nav_activate_service"
+        android:checkable="true"
+        />
+    <item android:title="@string/share_to_other">
+      <menu>
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_send_black_24dp"
+            android:title="@string/send_txt" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="@string/share_txt" />
+      </menu>
+    </item>
+    <item android:title="@string/gen_info">
+      <menu>
+        <item
+            android:icon="@drawable/ic_contact_mail_black_24dp"
+            android:id="@+id/nav_contactus"
+            android:title="@string/email_txt" />
+        <item
+            android:icon="@drawable/ic_info_black_24dp"
+            android:id="@+id/nav_about_app"
+            android:title="@string/about_us_txt" />
+        <item
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:id="@+id/nav_logout"
+            android:title="@string/logout_txt" />
+      </menu>
+    </item>
+  </group>
+</menu>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Splash">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/driverProfile"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp"
+        android:src="@drawable/ethio_rental_logo" />
+
+    <TextView
+        android:textSize="30dp"
+        android:background="@color/colorPrimary"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_below="@id/driverProfile"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wait_text"
+        />
+    <com.eyalbira.loadingdots.LoadingDots xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="56dp"
+        android:paddingBottom="100sp"
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="@android:color/holo_orange_light"
+        app:LoadingDots_dots_count="5"
+        app:LoadingDots_dots_size="15dp"
+        app:LoadingDots_dots_space="4dp"
+        app:LoadingDots_jump_duration="200"
+        app:LoadingDots_jump_height="4dp"
+        app:LoadingDots_loop_duration="800"
+        app:LoadingDots_loop_start_delay="100" />
+
+</RelativeLayout>

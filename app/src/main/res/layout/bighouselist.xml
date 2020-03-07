@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="100"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+  <TextView
+      android:id="@+id/housDesc"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20sp"
+      android:textAlignment="center"
+      android:text="@string/house_profile_txt"
+      android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+      android:textColor="@color/colorPrimary" />
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/imageHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_weight="50"
+          android:scaleType="center"
+          android:src="@drawable/ic_default_house" />
+
+      <ProgressBar
+          android:id="@+id/homeprogress"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/transparent"
+          android:layout_gravity="center"
+          android:visibility="visible" />
+    </FrameLayout>
+
+    <TextView
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:layout_alignBottom="@id/imageHolder"
+        android:text="Click the image to see more pics!"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+  </RelativeLayout>
+  <LinearLayout
+      android:layout_margin="10dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_gravity="center"
+      >
+    <TextView
+        android:id="@+id/houseTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageView"
+        android:text="Type"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/serviceTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/houseTypes"
+        android:layout_marginTop="5dp"
+        android:text="Service Type"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+    <TextView
+        android:id="@+id/housLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/houseTypes"
+        android:layout_marginTop="5dp"
+        android:text="Service Type"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serviceTypes"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:paddingRight="15dp"
+        android:text="No of rooms"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/housePrices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRating"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/imageView"
+        android:text="ETB 56990"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/ownerUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/serviceTypes"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_orange_dark"
+        android:paddingRight="15dp"
+        android:text="Owned By"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/ownerPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/textViewRating"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/imageView"
+        android:text="09100000"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/ownerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Owner"
+        />
+  </LinearLayout>
+</LinearLayout>

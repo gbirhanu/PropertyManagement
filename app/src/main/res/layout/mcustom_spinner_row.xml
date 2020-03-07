@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+  <!--
+      <ImageView
+          android:id="@+id/custome_spinner_image"
+          android:layout_width="50dp"
+          android:layout_height="30dp"
+          android:layout_margin="2dp"
+          android:src="@mipmap/ic_launcher" />-->
+  <TextView
+      android:id="@+id/custome_spinner_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="0dp"
+      android:background="@android:color/transparent"
+      android:text="Condominium"
+      android:maxLines="1"
+      android:padding="8dp"
+      android:textColor="#000"
+      android:textColorHint="#fff" />
+  <!-- <TextView
+       android:id="@+id/custome_spinner_name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:gravity="center"
+       android:layout_margin="0dp"
+       android:textSize="20sp"
+       android:text="Condominium" />-->
+
+</RelativeLayout>
